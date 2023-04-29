@@ -5,8 +5,8 @@ const mongoose = require('mongoose');
 const NodeCache = require('node-cache');
 const cus_utils = require("./utils.js");
 
-// const dbServer = "mongodb+srv://iqbaljubayer8:wpzkHKA64VUlI7mp@ventron.d0kxyl4.mongodb.net/BLOG";
-const dbServer = "mongodb://localhost/BLOG";
+const dbServer = "mongodb+srv://iqbaljubayer8:wpzkHKA64VUlI7mp@ventron.d0kxyl4.mongodb.net/BLOG";
+// const dbServer = "mongodb://localhost/BLOG";
 
 const app = express()
 const port = 8080;

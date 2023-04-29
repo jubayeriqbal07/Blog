@@ -9,10 +9,10 @@ var mongoose = require('mongoose');
 
 var NodeCache = require('node-cache');
 
-var cus_utils = require("./utils.js"); // const dbServer = "mongodb+srv://iqbaljubayer8:wpzkHKA64VUlI7mp@ventron.d0kxyl4.mongodb.net/BLOG";
+var cus_utils = require("./utils.js");
 
+var dbServer = "mongodb+srv://iqbaljubayer8:wpzkHKA64VUlI7mp@ventron.d0kxyl4.mongodb.net/BLOG"; // const dbServer = "mongodb://localhost/BLOG";
 
-var dbServer = "mongodb://localhost/BLOG";
 var app = express();
 var port = 8080;
 mongoose.connect(dbServer).then(function (element) {

@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    padding: 5px 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 2px solid black;
+    border-radius: 6px;
+    margin: 3px 5px;
+}
+
+.btn {
+    padding: 5px 20px;
+    margin: 0 3px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 2px solid black;
+    border-radius: 6px;
+    cursor: pointer;
+    /* height: 26px; */
+}
+
+.pos-relative {
+    position: relative;
+}

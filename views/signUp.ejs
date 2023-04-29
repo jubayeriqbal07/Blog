@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/CSS/utils.css">
+    <link rel="stylesheet" href="../static/CSS/sign.css">
+    <link rel="shortcut icon" href="../static/ASSETS/logo.jpg" type="image/x-icon">
+    <title>Blog - Sign Up</title>
+</head>
+
+<body>
+    <div class="container">
+        <%if (accExist) {%>
+            <div id="incorrect-box">
+                <h4>An account already exist with this email</h4>
+            </div>
+        <%}%>
+
+        <h1>Sign Up</h1>
+        <form action="/signUp" method="post" id="formId">
+            <div class="form-item">
+                <h3>Full Name:</h3>
+                <input type="text" name="usr_fullname" placeholder="Full Name">
+            </div>
+            <div class="form-item">
+                <p class="input_err">Fullname can't kept empty</p>
+            </div>
+            <div class="form-item">
+                <h3>Email:</h3>
+                <input type="email" name="usr_email" placeholder="Email">
+            </div>
+            <div class="form-item">
+                <p class="input_err">Email can't kept empty</p>
+            </div>
+            <div class="form-item">
+                <h3>Password:</h3>
+                <input type="password" name="usr_pass" placeholder="Password">
+            </div>
+            <div class="form-item">
+                <p class="input_err">password need atleast 8 characters</p>
+            </div>
+            <div class="form-item">
+                <button class="btn" type="submit">Create Account</button>
+            </div>
+            <div class="form-item">
+                <p>Already have an account? <a href="/signIn">Sign In</a></p>
+            </div>
+        </form>
+    </div>
+    <script src="../static/JS/signUp.js"></script>
+</body>
+
+</html>

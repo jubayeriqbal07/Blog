@@ -1,0 +1,87 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: #5dbbe1;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.container h1{
+    margin: 10px;
+}
+
+.container form{
+    background-color: #9ec6d6;
+    border-radius: 30px;
+    padding: 50px 100px;
+}
+
+.container form .form-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+.container form .form-item h3 {
+    width: 120px;
+    text-align: right;
+}
+
+
+.container form .form-item p{
+    margin-top: 20px;
+}
+
+.container form .form-item .input_err{
+    color: red;
+    font-size: 11px;
+    margin: -10px 0 10px 160px;
+    text-align: right;
+    width: 200px;
+    display: none;
+}
+
+
+#incorrect-box{
+    display: flex;
+    background-color: rgb(236, 87, 87);
+    border: 2px solid red;
+    width: 80%;
+    border-radius: 0 0 90px 90px;
+    height: 50px;
+    position: fixed;
+    top: -60px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px rgb(255, 135, 135);
+    animation-name: incorrect_box;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+#incorrect-box h4{
+    text-shadow: 2px 2px rgb(255, 168, 168);
+}
+
+@keyframes incorrect_box {
+    form {top: -60px;}
+    to{top: 0;}
+}
+
+@media screen and (max-width:600px){
+    .container form{
+        padding: 50px 0;
+    }
+    #incorrect-box{
+        width: 100%;
+    }
+
+    .container form .form-item p{
+        text-align: center;
+    }
+
+    input{
+        width: 46%;
+    };    
+}

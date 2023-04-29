@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/CSS/utils.css">
+    <link rel="stylesheet" href="../static/CSS/navigation_bar.css">
+    <link rel="stylesheet" href="../static/CSS/createPost.css">
+    <title>BLOG - Create Post</title>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="logo">
+                <a href="/">
+                    <img src="../static/ASSETS/logo.jpg" alt="BLOG">
+                </a>
+            </div>
+            <div class="nav-items">
+                <form action="/" method="get">
+                    <input type="search" name="search" placeholder="Search">
+                </form>
+                <% if (!isSignedIn) { %>
+                    <a href="/signIn"><button class="btn">Sign In</button></a>
+                    <a href="/signUp"><button class="btn">Sign Up</button></a>
+                <%} else {%>
+                    <div id="usr_nav">
+                        <div id="usr_nav_ico" onclick="usr_nav_ico_clicked()"></div>
+                        <ul id="usr_nav_list" class="display-none">
+                            <li><a href="">Profile</a></li>
+                            <li><a href="">My Posts</a></li>
+                            <li><a href="/signOut">Logout</a></li>
+                        </ul>
+                    </div>
+                <%}%>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container">
+        <form action="/createPost" method="post">
+            <h2>Create Post</h2>
+            <div class="form-items">
+                <input type="text" name="post_title" placeholder="TITLE">
+            </div>
+            <div class="form-items">
+                <div id="desc-box">
+                    <textarea name="desc" id="desc" cols="30" rows="10" placeholder="Description"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn">Post</button>
+        </form>
+    </section>
+
+
+    <script src="../static/JS/navigation_bar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+#posts-content {
+    background-color: #9ec6d6;
+    height: 80vh;
+    width: 80%;
+    margin: auto;
+    margin-top: 74px;
+    padding-bottom: 30px;
+}
+
+#posts-content h1 {
+    text-align: center;
+    text-decoration: underline;
+    padding: 30px;
+}
+
+#posts-content #desc {
+    background-color: red;
+    margin: 0 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+#posts-content p {
+    font-size: 20px;
+}
+
+#posts-content .desc-img {
+    text-align: center;
+    padding: 25px 0;
+}
+
+#content-usr{
+    text-align: right;
+    margin-top: 20px;
+}
+
+@media screen and (max-width:585px) {
+    #posts-content {
+        margin-top: 60px;
+    }
+}

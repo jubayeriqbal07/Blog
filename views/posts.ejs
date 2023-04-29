@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/CSS/utils.css">
+    <link rel="stylesheet" href="../static/CSS/navigation_bar.css">
+    <link rel="stylesheet" href="../static/CSS/footer.css">
+    <link rel="stylesheet" href="../static/CSS/posts.css">
+    <title>BLOG - <%=content.title%></title>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="logo">
+                <a href="/">
+                    <img src="../static/ASSETS/logo.jpg" alt="BLOG">
+                </a>
+            </div>
+            <div class="nav-items">
+                <form action="/" method="get">
+                    <input type="search" name="search" placeholder="Search">
+                </form>
+                <% if (!isSignedIn) { %>
+                    <a href="/signIn"><button class="btn">Sign In</button></a>
+                    <a href="/signUp"><button class="btn">Sign Up</button></a>
+                <%} else {%>
+                    <div id="usr_nav">
+                        <div id="usr_nav_ico" onclick="usr_nav_ico_clicked()"></div>
+                        <ul id="usr_nav_list" class="display-none">
+                            <li><a href="">Profile</a></li>
+                            <li><a href="">My Posts</a></li>
+                            <li><a href="/signOut">Logout</a></li>
+                        </ul>
+                    </div>
+                <%}%>
+            </div>
+        </nav>
+    </header>
+
+    <section id="posts-content" class="pos-relative">
+        <h1><%=content.title%></h1>
+        <div id="desc">
+            <%-content.desc%>
+            <p id="content-usr">By: <b><%= content.usr_ %></b></p>
+        </div>
+    </section>
+
+    <footer class="pos-relative">
+        www.blog.com
+    </footer>
+
+    <script src="../static/JS/navigation_bar.js"></script>
+</body>
+
+</html>

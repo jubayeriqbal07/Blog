@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/CSS/utils.css">
+    <link rel="stylesheet" href="../static/CSS/sign.css">
+    <link rel="import" href="./abc.html">
+    <title>Blog - Sign In</title>
+</head>
+
+<body>
+    <div class="container">
+        <%if (incorrect) {%>
+            <div id="incorrect-box">
+                <h4>The username or password is incorrect!</h4>
+            </div>
+        <%}%>
+
+        <h1>Sign In</h1>
+        <form action="/signIn" method="post">
+            <div class="form-item">
+                <h3>Email:</h3>
+                <input type="email" name="usr_email">
+            </div>
+            <div class="form-item">
+                <h3>Password:</h3>
+                <input type="password" name="usr_pass">
+            </div>
+            <div class="form-item">
+                <button class="btn" type="submit">Sign In</button>
+            </div>
+            <div class="form-item">
+                <p>Do not have an account? <a href="/signUp">Sign Up</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

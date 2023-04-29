@@ -3,12 +3,10 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const NodeCache = require('node-cache');
-const {
-    dsc_pretify
-} = require("./utils.js");
+const cus_utils = require("./utils.js");
 
-const dbServer = "mongodb+srv://iqbaljubayer8:wpzkHKA64VUlI7mp@ventron.d0kxyl4.mongodb.net/BLOG";
-// const dbServer = "mongodb://localhost/BLOG";
+// const dbServer = "mongodb+srv://iqbaljubayer8:wpzkHKA64VUlI7mp@ventron.d0kxyl4.mongodb.net/BLOG";
+const dbServer = "mongodb://localhost/BLOG";
 
 const app = express()
 const port = 8080;
@@ -46,7 +44,7 @@ const USER = mongoose.model('users', userSchecma);
 app.get('/', (req, res) => {
     POSTS.find().then(function (document) {
         document.forEach(element => {
-            element.desc = dsc_pretify(element.desc);
+            element.desc = cus_utils.short_dsc_pretify(element.desc)
         })
         params = {
             contents: document,

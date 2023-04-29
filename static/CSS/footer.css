@@ -1,6 +1,9 @@
 
 footer{
+    position: relative;
     background-color: rgb(47, 47, 47);
+    width: 100%;
     color: white;
     padding: 10px;
+    /* top: calc(100vh - 40px); */
 }

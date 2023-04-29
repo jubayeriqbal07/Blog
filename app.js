@@ -8,9 +8,14 @@ const {
 } = require("./utils.js");
 
 
+/* mongodb+srv://iqbaljubayer8:wpzkHKA64VUlI7mp@ventron.d0kxyl4.mongodb.net/test */
+/* wpzkHKA64VUlI7mp */
+
+const dbServer = "mongodb+srv://iqbaljubayer8:wpzkHKA64VUlI7mp@ventron.d0kxyl4.mongodb.net/test"
+
 const app = express()
 const port = 8080;
-const conn = mongoose.connect('mongodb://localhost/BLOG');
+const conn = mongoose.connect(dbServer);
 const myCache = new NodeCache()
 
 app.use('/static', express.static(path.join(__dirname, 'static')));

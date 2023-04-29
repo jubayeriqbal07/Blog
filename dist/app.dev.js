@@ -58,7 +58,7 @@ function load_contents() {
   POSTS.find().then(function (document) {
     document.forEach(function (element) {
       app.get("/posts/".concat(element._id), function (req, res) {
-        desc_ = dsc_pretify(element.desc);
+        desc_ = cus_utils.dsc_pretify(element.desc);
         params = {
           content: {
             title: element.title,

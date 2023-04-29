@@ -58,7 +58,7 @@ function load_contents() {
     POSTS.find().then(function (document) {
         document.forEach(element => {
             app.get(`/posts/${element._id}`, (req, res) => {
-                desc_ = dsc_pretify(element.desc);
+                desc_ = cus_utils.dsc_pretify(element.desc);
                 params = {
                     content: {
                         title: element.title,

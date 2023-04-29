@@ -11,11 +11,15 @@ const {
 /* mongodb+srv://iqbaljubayer8:wpzkHKA64VUlI7mp@ventron.d0kxyl4.mongodb.net/test */
 /* wpzkHKA64VUlI7mp */
 
-const dbServer = "mongodb+srv://iqbaljubayer8:wpzkHKA64VUlI7mp@ventron.d0kxyl4.mongodb.net/test"
+const dbServer = "mongodb+srv://iqbaljubayer8:wpzkHKA64VUlI7mp@ventron.d0kxyl4.mongodb.net/BLOG"
 
 const app = express()
 const port = 8080;
-const conn = mongoose.connect(dbServer);
+mongoose.connect(dbServer).then((element)=>{
+    console.log("Connetction Established!");
+}).catch(()=>{
+    console.log("Connetction Failed!");
+})
 const myCache = new NodeCache()
 
 app.use('/static', express.static(path.join(__dirname, 'static')));
